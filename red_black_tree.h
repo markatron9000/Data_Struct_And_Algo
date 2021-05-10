@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-//still under construction, but mostly there...
+//still under construction, but mostly there... very difficult one...
 
 template <typename Comparable>
 class RedBlackTree {
