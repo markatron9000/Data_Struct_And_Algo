@@ -6,6 +6,8 @@
 #include <iostream>
 #include <unordered_map>
 
+//not functional yet, but close!
+
 class Graph {
   //I'll be using adjacency matrix implementation
   //I have also tried to comment my code to make it as readable and understandable as possible :)
