@@ -34,7 +34,6 @@ class Stack {
 		}
 
 		Stack& operator=(const Stack& copier){
-			//apparently attempts a double free
 			if(this != &copier){
 				StackSize = copier.StackSize;
 				delete[] data;
@@ -79,70 +78,7 @@ class Stack {
 				throw std::out_of_range("The queue is... empty??? Find some more plates!");
 			}
 			return data[StackSize-1];
-		}		
-
-	/*
-	private:
-		size_t StackSize;
-		ArrayList<Object> *data;
-
-	public:
-
-		Stack(): StackSize(0), data(new ArrayList<Object>){
-
-		}
-
-		Stack(const Stack& copier){
-			ArrayList<Object> data;
-    		for(size_t i = 0; i < copier.StackSize; i++){
-  				Object x = copier.data -> access(i);
-  				data.insertNonRef(i, x);
-  			}
-    		StackSize = copier.StackSize;
-		}
-
-		~Stack(){
-			delete data;
-		}
-
-		Stack& operator=(const Stack& copier){
-			//apparently attempts a double free
-			if(this != &copier){
-				StackSize = copier.StackSize;
-				delete data;
-				ArrayList<Object> data;
-				for(size_t i = 0; i < copier.StackSize; i++){
-  					data -> insert(i, copier.data -> return_reference(i));
-  				}
-    		StackSize = copier.StackSize;
-			}
-			return *this;
-		}
-
-		void push(const Object& Newt){
-			data -> insert(StackSize, Newt);
-			StackSize++;
-		}
-
-		Object pop(){
-			if(StackSize==0){
-				throw std::out_of_range("The Stack is... empty??? Find some more plates!");
-			}
-			Object b;
-			b = data -> access(StackSize-1);
-			data -> remove(StackSize-1);
-			StackSize--;
-			return b;
-		}
-		
-		Object& front(){
-			//need to return reference
-			if(StackSize==0){
-				throw std::out_of_range("The queue is... empty??? Find some more plates!");
-			}
-			return data -> return_reference(StackSize-1);
-		}		
-	*/
+		}	
 };
 
 #endif  // STACK_H
