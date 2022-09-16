@@ -1,3 +1,2 @@
 # Data_Struct_And_Algo
-A collection of codes written in C++ for my demanding Data Structures and Algorithms class.   
-#### --Warning-- Most of these were written against a tight deadline, and written as classwork, so it will be very messy and not always commented well!
+A collection of codes written in C++ implementing different data structures and algorithms
